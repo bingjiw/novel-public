@@ -2,7 +2,7 @@
 set -e
 
 if [ -z "$1" ]; then
-  echo "用法: ./publish.sh 04"
+  echo "用法: ./publish.sh 01"
   exit 1
 fi
 
@@ -21,14 +21,8 @@ fi
 
 cp "$SRC_FILE" "$DST_DIR/$CH.md"
 
-TITLE=$(head -n 1 "$SRC_FILE" | sed 's/^# *//')
-
-if ! grep -q "$CH.md" index.md; then
-  echo "- [第${CH}章 $TITLE]($DST_DIR/$CH.html)" >> index.md
-fi
-
-git add .
-git commit -m "publish ch${CH}"
+git add "$DST_DIR/$CH.md"
+git commit -m "update ch${CH}"
 git push
 
-echo "✅ 第${CH}章已发布"
+echo "✅ 第${CH}章已更新并发布"
