@@ -1,4 +1,4 @@
-# 小说名（暂定）
+# 智能替代（The Replacement of Intelligence）
 
 ## 已发布章节
 - [第01章 无处可逃的月末](chapters/01.html)
