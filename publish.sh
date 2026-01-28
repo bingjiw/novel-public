@@ -24,23 +24,32 @@ fi
 
 cp "$SRC_FILE" "$DST_DIR/$CH.md"
 
-# 更新 index.md
-BASENAME=$(basename "$SRC_FILE" .md)
-TITLE_TEXT=${BASENAME//-/ }
-LINK_LINE="- [${TITLE_TEXT}](chapters/${CH}.html)"
-INDEX_FILE="index.md"
+# 重建 index.md （全量刷新以保证顺序正确）
+echo "# 智能替代（The Replacement of Intelligence）" > index.new
+echo "" >> index.new
+echo "## 已发布章节" >> index.new
 
-if [ -f "$INDEX_FILE" ]; then
-  if ! grep -q "chapters/${CH}.html" "$INDEX_FILE"; then
-    # 在 "连载中" 这一行之前插入链接
-    awk -v line="$LINK_LINE" '/连载中/ { print line } { print }' "$INDEX_FILE" > index.tmp && mv index.tmp "$INDEX_FILE"
-    echo "✅ 已将章节添加到目录"
-  else
-    echo "ℹ️ 目录中已存在该章节"
+# 按文件名排序遍历源目录
+for f in $(ls "$SRC_DIR"/第*章*.md | sort); do
+  # 提取文件名
+  fname=$(basename "$f")
+  # 提取标题文本：去掉 .md，把 - 换成空格
+  title=${fname%.md}
+  title=${title//-/ }
+  
+  # 提取章节号 (匹配第一个数字串)
+  if [[ "$fname" =~ 第([0-9]+)章 ]]; then
+     chnum="${BASH_REMATCH[1]}"
+     echo "- [${title}](chapters/${chnum}.html)" >> index.new
   fi
-fi
+done
 
-git add "$DST_DIR/$CH.md" "$INDEX_FILE"
+echo "" >> index.new
+echo "连载中，未完待续 ……" >> index.new
+
+mv index.new index.md
+
+git add "$DST_DIR/$CH.md" index.md
 git commit -m "update ch${CH}" || echo "没有新的变更，直接推送"
 git push
 
