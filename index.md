@@ -1,4 +1,4 @@
-# 智能替代（The Replacement of Intelligence）
+# 《2029 智能替代》
 
 ## 已发布章节
 - [第00章 序章](chapters/00.html)
