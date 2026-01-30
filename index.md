@@ -6,5 +6,6 @@
 - [第02章 隐藏的乘客](chapters/02.html)
 - [第03章 生锈的脚环](chapters/03.html)
 - [第04章 闪烁的红点](chapters/04.html)
+- [第05章 碎裂的酒杯](chapters/05.html)
 
 连载中，未完待续 ……
