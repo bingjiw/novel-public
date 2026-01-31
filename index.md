@@ -9,6 +9,6 @@
 - [第5章：隐形的锁链](chapters/05.html)
 - [第6章：闪烁的红点](chapters/06.html)
 - [第7章：碎裂的酒杯](chapters/07.html)
-- [第8章：带血的快递](chapters/08.html)
+- [第8章：活体货物](chapters/08.html)
 
 连载中，未完待续 ……
