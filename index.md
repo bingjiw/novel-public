@@ -10,6 +10,5 @@
 - [第06章 闪烁的红点](chapters/06.html)
 - [第07章 碎裂的酒杯](chapters/07.html)
 - [第08章 带血的快递](chapters/08.html)
-- [第08章 特殊的面试](chapters/08.html)
 
 连载中，未完待续 ……
