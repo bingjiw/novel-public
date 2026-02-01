@@ -10,5 +10,6 @@
 - [第6章：闪烁的红点](chapters/06.html)
 - [第7章：碎裂的酒杯](chapters/07.html)
 - [第8章：活体货物](chapters/08.html)
+- [第9章：南迁的诱饵](chapters/09.html)
 
 连载中，未完待续 ……
