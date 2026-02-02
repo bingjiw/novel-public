@@ -12,7 +12,7 @@
 - [第8章：看不见的项圈](chapters/08.html)
 - [第9章：碎裂的酒杯](chapters/09.html)
 - [第10章：活体货物](chapters/10.html)
-- [第11章：南迁的诱饵](chapters/11.html)
-- [第12章：仁川潜入准备](chapters/12.html)
+- [第11章：密室追猎](chapters/11.html)
+- [第12章：南迁的诱饵](chapters/12.html)
 
 连载中，未完待续 ……
